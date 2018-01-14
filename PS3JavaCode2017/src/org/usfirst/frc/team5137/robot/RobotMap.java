@@ -29,14 +29,14 @@ public class RobotMap {
 	// public static int rangefinderModule = 1;
 	
 	
-	Victor leftDrive;
-    Victor rightDrive;
-    
-    public static Spark slideDrive;
-    public static Spark shooter;
-    public static Spark climber;
-    public static Spark feeder;
-    public static Spark intake;
+	public static Victor leftDriveMotor;
+    public static Victor rightDriveMotor;
+   
+    public static Spark slideDriveMotor;
+    public static Spark shooterMotor;
+    public static Spark climberMotor;
+    public static Spark feederMotor;
+    public static Spark intakeMotor;
     
     int driveMode; // 0 is arcade, 1 is tank
 	
@@ -44,15 +44,15 @@ public class RobotMap {
     	
     	
     	//maybe leftDrive should be inverted instead?
-    	leftDrive = new Victor(0);
-    	rightDrive = new Victor(1);
-    	rightDrive.setInverted(true);
-    	slideDrive = new Spark(2);
-    	shooter = new Spark(3);
-    	climber = new Spark(4);
-    	feeder = new Spark(5);
-    	intake = new Spark(6);
-    	intake.setInverted(true);
+    	leftDriveMotor = new Victor(0);
+    	rightDriveMotor = new Victor(1);
+    	rightDriveMotor.setInverted(true);
+    	slideDriveMotor = new Spark(2);
+    	shooterMotor = new Spark(3);
+    	climberMotor = new Spark(4);
+    	feederMotor = new Spark(5);
+    	intakeMotor = new Spark(6);
+    	intakeMotor.setInverted(true);
     	
         driveMode = 0; //initiates to arcade drive mode
     }

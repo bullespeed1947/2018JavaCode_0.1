@@ -7,17 +7,17 @@ import org.usfirst.frc.team5137.robot.RobotMap;
 
 public class Intake_Subsytem extends Subsystem {
 
-	Spark intake = RobotMap.intake;
+	Spark intakeMotor = RobotMap.intakeMotor;
 
     public void initDefaultCommand() {
     }
 
     public void intake() {
-    	intake.set(1);
+    	intakeMotor.set(.5);
     }
 
     public void stop() {
-    	intake.set(0);
+    	intakeMotor.set(0);
     }
 	
 }
