@@ -8,6 +8,7 @@
 package org.usfirst.frc.team5137.robot;
 
 import edu.wpi.first.wpilibj.Spark;
+import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Victor;
 
 /**
@@ -31,11 +32,11 @@ public class RobotMap {
 	Victor leftDrive;
     Victor rightDrive;
     
-    Spark slideDrive;
-    Spark shooter;
-    Spark climber;
-    Spark feeder;
-    Spark intake;
+    public static Spark slideDrive;
+    public static Spark shooter;
+    public static Spark climber;
+    public static Spark feeder;
+    public static Spark intake;
     
     int driveMode; // 0 is arcade, 1 is tank
 	

@@ -7,13 +7,15 @@
 
 package org.usfirst.frc.team5137.robot;
 
+import org.usfirst.frc.team5137.robot.commands.ExampleCommand;
+import org.usfirst.frc.team5137.robot.subsystems.ExampleSubsystem;
+
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import org.usfirst.frc.team5137.robot.commands.ExampleCommand;
-import org.usfirst.frc.team5137.robot.subsystems.ExampleSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -23,9 +25,13 @@ import org.usfirst.frc.team5137.robot.subsystems.ExampleSubsystem;
  * project.
  */
 public class Robot extends TimedRobot {
-	public static final ExampleSubsystem kExampleSubsystem
-			= new ExampleSubsystem();
+	;
 	public static OI m_oi;
+	public static Subsystem intake;
+	public static Subsystem slideDrive;
+	public static Subsystem shooter;
+	public static Subsystem climber;
+	public static Subsystem feeder;
 
 	Command m_autonomousCommand;
 	SendableChooser<Command> m_chooser = new SendableChooser<>();

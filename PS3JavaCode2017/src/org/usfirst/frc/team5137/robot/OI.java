@@ -7,9 +7,11 @@
 
 package org.usfirst.frc.team5137.robot;
 
+import org.usfirst.frc.team5137.robot.commands.Climber_Command;
+import org.usfirst.frc.team5137.robot.commands.Intake_Command;
+import org.usfirst.frc.team5137.robot.commands.Shooter_Command;
+
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.Spark;
-import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -67,14 +69,16 @@ public class OI {
 	Button startButton = new JoystickButton(marinara, 1);
 	Button psButton = new JoystickButton(marinara, 1);
 	
+	
 	public OI() {
 		
-		triangleButton.whenPressed(command);
-		circleButton.whenPressed(command);
-		crossButton.whenPressed(command);
-		squareButton.whenPressed(command);
-		upButton.whenPressed(command);
-		rightButton.whenPressed(command);
+		/*triangleButton.whenPressed();
+		circleButton.whenPressed();
+		*/
+		crossButton.whenPressed(new Intake_Command());
+		squareButton.whenPressed(new Climber_Command());
+		upButton.whenPressed(new Shooter_Command());
+		/*rightButton.whenPressed(command);
 		downButton.whenPressed(command);
 		leftButton.whenPressed(command);
 		l1Button.whenPressed(command);
@@ -86,9 +90,10 @@ public class OI {
 		selectButton.whenPressed(command);
 		startButton.whenPressed(command);
 		psButton.whenPressed(command);
+		*/
 		
 	}
-	
+
 	
 	
 }
