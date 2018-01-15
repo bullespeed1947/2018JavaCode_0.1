@@ -34,6 +34,7 @@ public class Robot extends TimedRobot {
 	public static Climber_Subsystem climber;
 	public static DriveBase_Subsystem driveBase;
 	public static SwitchDrive_Subsystem switchDrive;
+	public static SlideDrive_Subsystem slideDrive;
 	
 	
 	Command m_autonomousCommand;
@@ -53,6 +54,8 @@ public class Robot extends TimedRobot {
 		shooter = new Shooter_Subsystem();
 		climber = new  Climber_Subsystem();
 		switchDrive = new SwitchDrive_Subsystem();
+		slideDrive = new SlideDrive_Subsystem();
+		driveBase = new DriveBase_Subsystem();
 		m_chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", m_chooser);
