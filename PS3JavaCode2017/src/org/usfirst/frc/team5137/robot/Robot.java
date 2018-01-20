@@ -35,7 +35,8 @@ public class Robot extends TimedRobot {
 	public static DriveBase_Subsystem driveBase;
 	public static SwitchDrive_Subsystem switchDrive;
 	public static SlideDrive_Subsystem slideDrive;
-	
+	public static Test_Auto_Command testAutoCom;
+	public static Test_Auto_Subsystem testAutoSub;
 	
 	Command m_autonomousCommand;
 	SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -49,6 +50,9 @@ public class Robot extends TimedRobot {
 		
 		
 		m_oi = new OI();
+		
+		testAutoCom = new Test_Auto_Command();
+		testAutoSub = new Test_Auto_Subsystem();
 		
 		intake = new Intake_Subsytem();
 		shooter = new Shooter_Subsystem();
@@ -102,6 +106,11 @@ public class Robot extends TimedRobot {
 		if (m_autonomousCommand != null) {
 			m_autonomousCommand.start();
 		}
+		
+		if (testAutoCom != null) {
+			testAutoCom.start();
+		}
+		
 	}
 
 	/**
